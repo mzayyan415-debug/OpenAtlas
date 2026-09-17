@@ -1,0 +1,18 @@
+const resources=[
+ {name:'Obsidian',category:'Productivity',icon:'✦',rating:4.9,description:'A private, flexible workspace for your notes, ideas, and knowledge graph.',url:'https://obsidian.md',tag:'Editor'},
+ {name:'freeCodeCamp',category:'Learning',icon:'⌘',rating:4.8,description:'Learn to code with full courses, projects, and certifications at no cost.',url:'https://freecodecamp.org',tag:'Education'},
+ {name:'Figma Community',category:'Design',icon:'◈',rating:4.8,description:'Discover templates, plugins, and design resources from a generous community.',url:'https://figma.com/community',tag:'Design'},
+ {name:'Excalidraw',category:'Productivity',icon:'⌁',rating:4.7,description:'A simple virtual whiteboard for sketching hand-drawn diagrams together.',url:'https://excalidraw.com',tag:'Tool'},
+ {name:'MDN Web Docs',category:'Development',icon:'M',rating:4.9,description:'The definitive open documentation for web technologies and browser APIs.',url:'https://developer.mozilla.org',tag:'Reference'},
+ {name:'The Marginalian',category:'Learning',icon:'◎',rating:4.6,description:'Thoughtful writing about art, science, philosophy, and what it means to be human.',url:'https://themarginalian.org',tag:'Reading'},
+ {name:'Are.na',category:'Communities',icon:'▦',rating:4.6,description:'A calm place to collect and connect ideas with curious people.',url:'https://www.are.na',tag:'Community'},
+ {name:'Khan Academy',category:'Learning',icon:'K',rating:4.8,description:'Free, world-class education for anyone, anywhere.',url:'https://khanacademy.org',tag:'Education'},
+ {name:'Sunsama',category:'Productivity',icon:'☼',rating:4.5,description:'A mindful daily planner that brings tasks and calendars into focus.',url:'https://sunsama.com',tag:'Planner'}
+];
+const categories=['All',...new Set(resources.map(r=>r.category))];let active='All';
+const chips=document.querySelector('#chips'),grid=document.querySelector('#resources'),empty=document.querySelector('#empty');
+function renderChips(){chips.innerHTML=categories.map(c=>`<button class="chip ${c===active?'active':''}" data-category="${c}">${c}</button>`).join('');chips.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{active=b.dataset.category;renderChips();render()})}
+function render(){const q=document.querySelector('#search').value.toLowerCase();let list=resources.filter(r=>(active==='All'||r.category===active)&&`${r.name} ${r.category} ${r.description}`.toLowerCase().includes(q));const sort=document.querySelector('#sort').value;if(sort==='rating')list.sort((a,b)=>b.rating-a.rating);if(sort==='newest')list=list.reverse();grid.innerHTML=list.map(r=>`<article class="resource"><div class="resource-top"><span>${r.icon} &nbsp; ${r.category}</span><span>★ ${r.rating}</span></div><h3>${r.name}</h3><p>${r.description}</p><div class="resource-foot"><span>${r.tag}</span><a href="${r.url}" target="_blank" rel="noopener">Visit ↗</a></div></article>`).join('');empty.classList.toggle('hidden',list.length>0)}
+renderChips();render();document.querySelector('#search').oninput=render;document.querySelector('#sort').onchange=render;
+const toast=document.querySelector('#toast');function notify(msg){toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3500)}
+document.querySelector('#newsletter').onsubmit=e=>{e.preventDefault();e.target.reset();notify('You’re on the list — welcome to the Sunday Signal.')};document.querySelector('#submit-form').onsubmit=e=>{e.preventDefault();e.target.reset();notify('Thanks! Your resource was sent for review.')};document.querySelectorAll('[data-action="pro"]').forEach(b=>b.onclick=()=>notify('The Pro waitlist is open — billing will be connected before launch.'));
