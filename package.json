@@ -1,0 +1,23 @@
+{
+  "name": "openatlas-paid",
+  "version": "1.0.0",
+  "description": "OpenAtlas monetization-ready discovery platform with PayPal and MTN MoMo checkout flows",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "resource-directory",
+    "saas",
+    "monetization",
+    "payments",
+    "atlas"
+  ],
+  "author": "mzayyan415-debug",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

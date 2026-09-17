@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OpenAtlas is a premium discovery platform for curated tools, communities, education, and trusted resources." />
+    <title>OpenAtlas — premium discovery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">O</span>
+          <span>OpenAtlas</span>
+        </div>
+        <nav>
+          <a href="#discover">Discover</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#publish">Publish</a>
+          <a href="#revenue">Revenue</a>
+        </nav>
+        <button class="btn btn-ghost" data-open-checkout="pro">Join Pro</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Built for real monetization</p>
+            <h1>Discover better resources.<br /><span>Grow a reliable income.</span></h1>
+            <p class="lead">Curated tools, learning resources, communities, and premium discovery experiences. Designed to earn through trust, not traffic tricks.</p>
+            <div class="cta-row">
+              <button class="btn btn-primary" data-open-checkout="pro">Start Pro</button>
+              <a class="link" href="#pricing">View pricing</a>
+            </div>
+            <ul class="mini-list">
+              <li>Trusted curation</li>
+              <li>Verified listings</li>
+              <li>Premium subscriptions</li>
+            </ul>
+          </div>
+          <div class="hero-panel">
+            <div class="panel-card">
+              <p class="stat-label">Active revenue streams</p>
+              <div class="stat-row">
+                <strong>4</strong>
+                <span>Monetization channels</span>
+              </div>
+              <div class="value-grid">
+                <div>
+                  <small>Pro</small>
+                  <b>$5/mo</b>
+                </div>
+                <div>
+                  <small>Publisher</small>
+                  <b>$79/mo</b>
+                </div>
+                <div>
+                  <small>Affiliate</small>
+                  <b>+18%</b>
+                </div>
+                <div>
+                  <small>Partners</small>
+                  <b>Custom</b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="discover" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Discovery</p>
+              <h2>Curated for useful people.</h2>
+            </div>
+            <p class="section-copy">Every listing is categorized by value, trust, and clarity so people find what matters faster.</p>
+          </div>
+          <div class="toolbar">
+            <label class="search">
+              <span>⌕</span>
+              <input id="searchInput" type="search" placeholder="Search resources, categories, or tools" />
+            </label>
+            <select id="filterCategory">
+              <option value="all">All categories</option>
+              <option value="AI">AI</option>
+              <option value="Design">Design</option>
+              <option value="Learning">Learning</option>
+              <option value="Open tools">Open tools</option>
+              <option value="Productivity">Productivity</option>
+            </select>
+          </div>
+          <div id="resourceGrid" class="resource-grid"></div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section pricing-section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Pricing</p>
+              <h2>Choose the plan that fits your workflow.</h2>
+            </div>
+            <p class="section-copy">A healthy monetization model balances affordability for users and sustainable revenue for the platform.</p>
+          </div>
+          <div class="pricing-grid">
+            <article class="price-card">
+              <span class="pill">Free</span>
+              <h3>Starter</h3>
+              <div class="amount">$0<span>/mo</span></div>
+              <ul>
+                <li>Browse the atlas</li>
+                <li>Save up to 10 resources</li>
+                <li>Basic filtering</li>
+              </ul>
+              <button class="btn btn-secondary" data-open-checkout="starter">Get started</button>
+            </article>
+            <article class="price-card featured">
+              <span class="pill">Most popular</span>
+              <h3>Pro</h3>
+              <div class="amount">$5<span>/mo</span></div>
+              <ul>
+                <li>Unlimited collections</li>
+                <li>Smart recommendations</li>
+                <li>Weekly curated digest</li>
+              </ul>
+              <button class="btn btn-primary" data-open-checkout="pro">Pay with PayPal</button>
+              <button class="btn btn-momo" data-open-checkout="pro-momo">Pay with MTN MoMo</button>
+            </article>
+            <article class="price-card">
+              <span class="pill">Business</span>
+              <h3>Team</h3>
+              <div class="amount">$19<span>/mo</span></div>
+              <ul>
+                <li>Shared stacks</li>
+                <li>Priority moderation</li>
+                <li>Admin research team access</li>
+              </ul>
+              <button class="btn btn-secondary" data-open-checkout="team">Choose team</button>
+            </article>
+            <article class="price-card">
+              <span class="pill">Featured</span>
+              <h3>Publisher</h3>
+              <div class="amount">$79<span>/mo</span></div>
+              <ul>
+                <li>Verified company profile</li>
+                <li>Featured placement</li>
+                <li>Lead capture tools</li>
+              </ul>
+              <button class="btn btn-secondary" data-open-checkout="publisher">List profile</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="publish" class="section split-section">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Publish</p>
+            <h2>Share something that helps people.</h2>
+            <p class="section-copy">A submission flow with moderation improves trust and creates a high-quality database that sustains the product.</p>
+          </div>
+          <form id="resourceForm" class="card-form">
+            <input type="text" name="name" placeholder="Resource name" required />
+            <input type="url" name="url" placeholder="https://example.com" required />
+            <select name="category" required>
+              <option value="">Select category</option>
+              <option>AI</option>
+              <option>Design</option>
+              <option>Learning</option>
+              <option>Open tools</option>
+              <option>Productivity</option>
+            </select>
+            <textarea name="reason" placeholder="Why is it worth people’s time?" required></textarea>
+            <button class="btn btn-primary" type="submit">Submit for review</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="revenue" class="section revenue-section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Revenue model</p>
+              <h2>Multiple streams. One healthier business.</h2>
+            </div>
+            <p class="section-copy">The product is designed to make revenue from trust and useful value, not gimmicky growth hacks.</p>
+          </div>
+          <div class="stats-grid">
+            <article class="metric-card">
+              <span class="metric-name">Pro subscriptions</span>
+              <b>$5 / user</b>
+              <small>Recurring monthly revenue</small>
+            </article>
+            <article class="metric-card">
+              <span class="metric-name">Business listings</span>
+              <b>$79 / listing</b>
+              <small>Verified publishers and services</small>
+            </article>
+            <article class="metric-card">
+              <span class="metric-name">Affiliate referrals</span>
+              <b>15–25%</b>
+              <small>Only on relevant, disclosed offers</small>
+            </article>
+            <article class="metric-card">
+              <span class="metric-name">Team plans</span>
+              <b>$19 / seat</b>
+              <small>Used by research teams and tiny companies</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <div class="container cta-box">
+          <div>
+            <p class="eyebrow">Launch-ready</p>
+            <h2>Turn this into a real, student-friendly online income stream.</h2>
+          </div>
+          <button class="btn btn-primary" data-open-checkout="pro">Activate launch plan</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div class="brand"><span class="brand-mark">O</span><span>OpenAtlas</span></div>
+        <p>Independent discovery, premium members, and sustainable growth.</p>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
