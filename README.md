@@ -1,36 +1,35 @@
-# OpenAtlas
+# OpenAtlas DM Revenue Systems
 
-OpenAtlas is an original, legitimate resource-discovery platform designed for useful tools, education, communities, and services. It is intentionally not a copy of another site's branding or content.
+OpenAtlas now presents a legitimate productized service for creators and creator-led businesses: we design, deploy, and optimize disclosed AI-driven DM systems that answer approved FAQs, qualify prospects, and route high-intent leads to a human, calendar, CRM, or checkout.
 
 ## Current MVP
 
-This repository contains a fast, dependency-free landing page that is deployable on GitHub Pages, Netlify, Vercel static hosting, or any basic web host.
-
-- Responsive original design
-- Search, category filters, sorting, and curated resource cards
-- Resource submission flow (front-end demo)
-- Newsletter signup flow (front-end demo)
-- Pro waitlist and pricing presentation
-- Accessible semantic HTML and SEO metadata
-- No adware, deceptive redirects, or unsafe resource categories
+- Conversion-focused service landing page
+- Retainer plans: Launch ($299/mo), Growth ($699/mo), Scale ($1,499/mo)
+- Interactive safe demo assistant
+- Strategy-call / lead intake form
+- Demo checkout endpoint for plan selection
+- Express API foundation for future integrations
+- Explicit AI disclosure and human escalation positioning
 
 ## Run locally
 
 ```bash
-python3 -m http.server 8080
+npm install
+npm start
 ```
 
-Then open `http://localhost:8080`.
+Open `http://localhost:3000`.
 
-## Production monetization checklist
+## Production work still required
 
-The current forms intentionally do not pretend to process money. Before accepting payments, connect a verified payment provider such as Stripe Checkout or Paddle from a secure serverless/API backend. Add authentication, a database, rate limiting, email verification, privacy/terms pages, tax handling, refund rules, and a consent-aware analytics tool.
+The current checkout endpoint is demo-only. Before taking money or connecting creator accounts, add authentication, a database, CRM/email integration, payment-provider verification, secret management, rate limiting, audit logs, consent records, platform API approval, and signed webhook handlers. Use official APIs and comply with each platform's automation rules; never spam, impersonate a creator, or send unsolicited messages.
 
-Recommended revenue streams:
+## Service delivery model
 
-1. Optional Pro membership for collections, alerts, and personal research tools.
-2. Clearly marked paid publisher profiles and sponsored placements.
-3. Affiliate partnerships only where relevant and transparently disclosed.
-4. Team/API plans after there is validated demand.
-
-Never promise earnings. Revenue depends on traffic, trust, retention, pricing, conversion, and compliance.
+1. Audit the creator's offer, inbox, policies, and FAQs.
+2. Write an approved conversation playbook and qualification criteria.
+3. Connect an official channel/API and disclose the assistant.
+4. Route high-intent conversations to the creator's chosen destination.
+5. Review transcripts, conversion signals, and failures monthly.
+6. Improve the playbook and report outcomes without guaranteeing revenue.
